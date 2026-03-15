@@ -26,3 +26,8 @@ Desenvolver habilidades em:
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![Data Science](https://img.shields.io/badge/Data-Science-green)
 ![Status](https://img.shields.io/badge/status-learning-orange)
+
+## Repository structure
+
+- exercicios_python → practice exercises
+- projetos → practical projects
