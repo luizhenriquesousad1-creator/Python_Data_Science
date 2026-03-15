@@ -1,14 +1,18 @@
-# Python_Data_Science
+# Python Data Science Journey
 
-Repositório com exercícios e projetos desenvolvidos durante
-meus estudos de Python aplicados à Ciência de Dados.
+Este repositório contém exercícios e projetos desenvolvidos durante
+meus estudos de Python com foco em Ciência de Dados.
 
 ## Conteúdo
 
+  1º Exercícios de Python
 - Estruturas de dados
 - List comprehension
 - Manipulação de matrizes
-- Projetos práticos de análise de dados
+- Dicionários
+
+2º Projetos
+- Analisador de vendas (em desenvolvimento)
 
 ## Objetivo
 
@@ -17,3 +21,4 @@ Desenvolver habilidades em:
 - Python
 - análise de dados
 - modelagem matemática
+- ciência de dados
