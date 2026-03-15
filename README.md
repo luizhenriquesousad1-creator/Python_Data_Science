@@ -22,3 +22,7 @@ Desenvolver habilidades em:
 - análise de dados
 - modelagem matemática
 - ciência de dados
+
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Data Science](https://img.shields.io/badge/Data-Science-green)
+![Status](https://img.shields.io/badge/status-learning-orange)
