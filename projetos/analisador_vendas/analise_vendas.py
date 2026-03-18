@@ -28,3 +28,7 @@ print(f"O faturamento total foi {faturamento} reais")
 maior_venda = maior_venda(vendas)
 
 print(f"A maior venda foi de um {maior_venda['produto']}, que vendeu {maior_venda['quantidade']} unidades e custou {maior_venda['preco']} reais." )
+
+
+if __name__ == "__main__":
+    main()
