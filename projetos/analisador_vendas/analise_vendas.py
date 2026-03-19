@@ -26,8 +26,11 @@ def main():
         print("faturamento total - [3]")
         print("Fechar programa - [4]")
 
-        opcao = int(input("digite o numero da opção desejada: "))
-
+        try:
+            opcao = int(input("digite o numero da opção desejada: "))
+        except ValueError:
+            print("Entrada invalida. Digite um número.")
+        
         if opcao == 1:
             print(f"Os produtos vendidos são : {lista_produtos(df)}")
 
