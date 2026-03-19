@@ -1,33 +1,49 @@
-from dados_vendas import vendas
-
-#funções:
-#Lista de produtos
-def lista_produtos(vendas):
-
-    produtos = set(venda['produto'] for venda in vendas)
-
-    return produtos
-
-def maior_venda (vendas):
-
-    return max(vendas, key=lambda venda: venda["preco"] * venda["quantidade"] )
-
-def faturamento_total(vendas):
-
-    return sum(iten['preco'] * iten['quantidade'] for iten in vendas)
+import pandas as pd
 
 
-lista_de_produtos = lista_produtos(vendas)
+def carregar_dados_csv(caminho):
+    return pd.read_csv(caminho)
 
-print(f"Os produtos vendidos são : {lista_de_produtos}")
+def lista_produtos(df):
+    return set(df['produto'].unique())
 
-faturamento = faturamento_total(vendas)
+def faturamento_total(df):
+    return (df['preco'] * df['quantidade']).sum()
 
-print(f"O faturamento total foi {faturamento} reais")
+def maior_venda(df):
+    return (df['preco'] * df['quantidade']).idxmax()
 
-maior_venda = maior_venda(vendas)
+def main():
+    caminho = input("digite o nome da base de dados: ")
+    df = carregar_dados_csv(caminho)
 
-print(f"A maior venda foi de um {maior_venda['produto']}, que vendeu {maior_venda['quantidade']} unidades e custou {maior_venda['preco']} reais." )
+
+    while True:
+
+        print("lista de produtos - [1]")
+        print("maior venda - [2]")
+        print("faturamento total - [3]")
+        print("Fechar programa - [4]")
+
+        opcao = int(input("digite o numero da opção desejada: "))
+
+        if opcao == 1:
+            print(f"Os produtos vendidos são : {lista_produtos(df)}")
+
+        elif opcao == 2:
+            print(f"A maior vendas foi de {maior_venda['produto']},"
+                  f"com {maior_venda['quantidade']} unidades,"
+                  f"totalizando {maior_venda['preco'] * maior_venda['quantidade']}")
+
+        elif opcao == 3:
+            print(f"O faturamento total foi de {faturamento_total(df)} reais.")
+
+        elif opcao == 4:
+            break
+
+        else:
+            print("Opção invalida, tente novamente: ")
+            continue
 
 
 if __name__ == "__main__":
