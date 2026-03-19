@@ -5,7 +5,7 @@ def carregar_dados_csv(caminho):
     return pd.read_csv(caminho)
 
 def lista_produtos(df):
-    return set(df['produto'].unique())
+    return list(df['produto'].unique())
 
 def faturamento_total(df):
     return (df['preco'] * df['quantidade']).sum()
