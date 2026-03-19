@@ -33,7 +33,9 @@ def main():
             continue
         
         if opcao == 1:
-            print(f"\nOs produtos vendidos são : {lista_produtos(df)}")
+            print(f"\nOs produtos vendidos são: }")
+            for produtos in lista_produtos(df):
+                print(f"- {produto})
 
         elif opcao == 2:
             maior = maior_venda(df)
