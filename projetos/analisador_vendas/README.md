@@ -78,9 +78,14 @@ O faturamento total foi 1650 reais
 ```
 
 ## 📈 Próximos passos
-
-* Criar visualizações com gráficos
-
----
+🚀 Próximas melhorias
+📈 Adicionar gráficos com Matplotlib
+📊 Ranking de produtos mais vendidos
+🔍 Filtros por preço
+📂 Suporte a múltiplos arquivos CSV
 
 👨‍💻 Projeto desenvolvido como parte dos estudos em Python para Ciência de Dados.
+
+👨‍💻 Autor
+
+Luiz Henrique
