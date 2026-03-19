@@ -11,7 +11,8 @@ def faturamento_total(df):
     return (df['preco'] * df['quantidade']).sum()
 
 def maior_venda(df):
-    return (df['preco'] * df['quantidade']).idxmax()
+    idx = (df['preco'] * df['quantidade']).idxmax()
+    return df.loc[idx]
 
 def main():
     caminho = input("digite o nome da base de dados: ")
