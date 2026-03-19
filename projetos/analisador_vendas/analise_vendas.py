@@ -36,9 +36,11 @@ def main():
             print(f"\nOs produtos vendidos são : {lista_produtos(df)}")
 
         elif opcao == 2:
+            maior = maior_venda(df)
+            valor_total = maior['peco'] * maior['quantidade']
             print(f"\nA maior venda foi de {maior_venda['produto']},"
                   f"com {maior_venda['quantidade']} unidades,"
-                  f"totalizando {maior_venda['preco'] * maior_venda['quantidade']}")
+                  f"totalizando {valor_total}")
 
         elif opcao == 3:
             print(f"\nO faturamento total foi de {faturamento_total(df)} reais.")
