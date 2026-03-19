@@ -33,21 +33,21 @@ def main():
             continue
         
         if opcao == 1:
-            print(f"Os produtos vendidos são : {lista_produtos(df)}")
+            print(f"\nOs produtos vendidos são : {lista_produtos(df)}")
 
         elif opcao == 2:
-            print(f"A maior vendas foi de {maior_venda['produto']},"
+            print(f"\nA maior vendas foi de {maior_venda['produto']},"
                   f"com {maior_venda['quantidade']} unidades,"
                   f"totalizando {maior_venda['preco'] * maior_venda['quantidade']}")
 
         elif opcao == 3:
-            print(f"O faturamento total foi de {faturamento_total(df)} reais.")
+            print(f"\nO faturamento total foi de {faturamento_total(df)} reais.")
 
         elif opcao == 4:
             break
 
         else:
-            print("Opção invalida, tente novamente: ")
+            print("\nOpção invalida, tente novamente: ")
             continue
 
 
