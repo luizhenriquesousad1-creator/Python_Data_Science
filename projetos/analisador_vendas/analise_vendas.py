@@ -20,7 +20,7 @@ def main():
 
 
     while True:
-
+        print("\n---MENU---")
         print("lista de produtos - [1]")
         print("maior venda - [2]")
         print("faturamento total - [3]")
