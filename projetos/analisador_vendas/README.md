@@ -1,20 +1,16 @@
 # 📊 Analisador de Vendas (CLI)
 
-Este projeto é um sistema de análise de vendas desenvolvido em Python, com foco em manipulação de dados utilizando a biblioteca Pandas.
-
-O sistema funciona via terminal (CLI) e permite ao usuário explorar dados de vendas de forma simples e interativa.
-
+Este projeto consiste em um sistema de análise de vendas desenvolvido em Python utilizando a biblioteca Pandas.
+A aplicação permite ao usuário explorar dados de vendas através de uma interface interativa no terminal (CLI), 
+realizando análises como faturamento total, produtos vendidos e identificação da maior venda.
 
 ## 🎯 Objetivo do projeto
 
 Este projeto foi desenvolvido com o objetivo de:
 
 * Praticar análise de dados com Pandas
-
 * Trabalhar com arquivos CSV
-
 * Criar aplicações interativas em Python (CLI)
-
 * Desenvolver projetos para portfólio em Data Science
 
 ## 📁 Estrutura do Projeto
@@ -77,12 +73,22 @@ A maior venda foi de um monitor, que vendeu 1 unidades e gerou 900 reais.
 O faturamento total foi 1650 reais
 ```
 
+## 🧩 Problema resolvido
+
+Este projeto simula um cenário comum de negócios, onde é necessário analisar dados de vendas para extrair informações relevantes, 
+como desempenho de produtos e faturamento. A solução permite transformar dados brutos em insights úteis de forma simples e interativa.
+
 ## 📈 Próximos passos
 🚀 Próximas melhorias
 📈 Adicionar gráficos com Matplotlib
 📊 Ranking de produtos mais vendidos
 🔍 Filtros por preço
 📂 Suporte a múltiplos arquivos CSV
+
+## 📌 Status do projeto
+
+✅ Concluído (versão inicial)  
+🔄 Em evolução
 
 👨‍💻 Projeto desenvolvido como parte dos estudos em Python para Ciência de Dados.
 
