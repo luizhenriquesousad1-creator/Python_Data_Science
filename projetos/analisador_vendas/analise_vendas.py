@@ -13,6 +13,12 @@ def faturamento_total(df):
 def maior_venda(df):
     idx = (df['preco'] * df['quantidade']).idxmax()
     return df.loc[idx]
+    
+def protudo_mais_lucrativo(df):
+    total_por_protudo = (df['preco'] * df['quantidade']).groupby(df['produto']).sum()
+    produto = total_por_produto.idxmax()
+    valor = total_por_produto.max()
+    return produto, valor
 
 def main():
     caminho = input("digite o nome da base de dados: ")
@@ -35,7 +41,7 @@ def main():
         if opcao == 1:
             print(f"\nOs produtos vendidos são: }")
             for produtos in lista_produtos(df):
-                print(f"- {produto})
+                print(f"- {produto}")
 
         elif opcao == 2:
             maior = maior_venda(df)
@@ -50,6 +56,11 @@ def main():
         elif opcao == 4:
             break
 
+        elif opcao == 5:
+            produto, valor = produto_mais_lucrativo(df)
+            print(f"\nProduto mais lucrativo: {produto}\n"
+                  f"Faturamento total: {valor:,.2f}")
+        
         else:
             print("\nOpção invalida, tente novamente: ")
             continue
