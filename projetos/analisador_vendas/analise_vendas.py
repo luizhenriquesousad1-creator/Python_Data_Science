@@ -1,5 +1,5 @@
 import pandas as pd
-
+import matplotlib.pyplot as plt
 
 def carregar_dados_csv(caminho):
     return pd.read_csv(caminho)
@@ -31,6 +31,17 @@ def filtro_por_valor(df):
     resultado = df[filtro]
     return resultado
 
+def grafico_faturamento(df):
+    faturamento = (df['produto'] * df['quantidade']).groupby(df['produto']).sum()
+
+    plt.bar(faturamento.index, faturamneto.values)
+
+    plt.title("Faturaento por produto")
+    plt.xlabel("Produto")
+    plt.ylabel("Faturamento R$")
+
+return plt.show()
+
 def main():
     caminho = input("digite o nome da base de dados: ")
     df = carregar_dados_csv(caminho)
@@ -44,6 +55,7 @@ def main():
         print("Ranking de vendas - [4]")
         print("maior lucro - [5]")
         print("Filtrar vendas por valor - [6]")
+        print("Mostra Gráfico Faturamento X Produto" - [7]) 
         print("Encerrar programa - [0]")
 
         try:
@@ -84,6 +96,10 @@ def main():
                 print(f"Produto: {linha['produto']}\n"
                       f"Quantidade: {linha['quantidade']}\n"
                       f"Total: {total:,.2f}\n")
+                
+        elif opcao == 7:
+            print(f"\nMontando o gráfico")
+            grafico_faturmento(df)
                 
         elif opcao == 0:
             print("\nEncerrando programa...")
