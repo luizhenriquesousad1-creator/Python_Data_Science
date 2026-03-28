@@ -42,6 +42,23 @@ def grafico_faturamento(df):
 
 return plt.show()
 
+def grafico_quantidade(df):
+
+    quantidade = df.groupby('produto')['quantidade'].sum()
+    quantidade = quantidade.sort_values(ascending=False)
+
+    plt.bar(quantidade.index, quantidade.values)
+
+    plt.xlabel('Produto')
+    plt.xticks(rotation=45)
+
+    plt.ylabel('Quantidade')
+    plt.tight_layout()
+
+    plt.grid(axis='y', linestyle='--', alpha=0.7
+
+    return plt.show()
+
 def main():
     caminho = input("digite o nome da base de dados: ")
     df = carregar_dados_csv(caminho)
@@ -56,6 +73,7 @@ def main():
         print("maior lucro - [5]")
         print("Filtrar vendas por valor - [6]")
         print("Mostra Gráfico Faturamento X Produto" - [7]) 
+        print("mostra Gráfico Quantidade X Produto: - [8])
         print("Encerrar programa - [0]")
 
         try:
@@ -100,7 +118,11 @@ def main():
         elif opcao == 7:
             print(f"\nMontando o gráfico")
             grafico_faturmento(df)
-                
+
+        elif opcao == 8:
+            print(f"\nGerando gráfico: ")
+            grafico_quantidade(df)
+            
         elif opcao == 0:
             print("\nEncerrando programa...")
             break
