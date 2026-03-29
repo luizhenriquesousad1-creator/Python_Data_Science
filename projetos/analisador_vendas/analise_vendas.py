@@ -3,6 +3,31 @@ import matplotlib.pyplot as plt
 
 def carregar_dados_csv(caminho):
     return pd.read_csv(caminho)
+    
+def carrega_novo_arquivo():
+    colunas_necessarias = ['produto'], ['preco'], ['quantidade']
+    caminho = input("digite o nome do novo arquivo.CSV: ")
+                    
+    try: 
+        df.read_csv(caminho)
+        
+        if not all(col indf.columns for col in colunas_necessarias):
+            print("\n Erro: O arquivo não posssui as colunas necessárias.")
+            print(f"\n colunas esperadas: {colunas_necessarias}")
+            return None
+            
+        print("\nArquivo carregado com sucesso.")
+        return df
+    except FileNotFoundErro:
+        print(f"\n Erro: Arquivo não encontrado")
+
+    except Exception as e:
+        print(f"\nErro ao carregar arquivo: {e}")
+        return None
+
+    except pd.errors.EmptyDataError:
+        print("\nErro: O Arquivo está vazio.")
+        return None
 
 def lista_produtos(df):
     return list(df['produto'].unique())
@@ -73,7 +98,8 @@ def main():
         print("maior lucro - [5]")
         print("Filtrar vendas por valor - [6]")
         print("Mostra Gráfico Faturamento X Produto" - [7]) 
-        print("mostra Gráfico Quantidade X Produto: - [8])
+        print("Mostra Gráfico Quantidade X Produto: - [8]")
+        print("Carregar novo arquivo csv - [9]")
         print("Encerrar programa - [0]")
 
         try:
@@ -122,6 +148,12 @@ def main():
         elif opcao == 8:
             print(f"\nGerando gráfico: ")
             grafico_quantidade(df)
+
+        elif opcao == 9:
+            print("Preparando")
+            novo_df = carrega_novo_arquivo()
+            if novo_df is not None:
+                df = novo_df
             
         elif opcao == 0:
             print("\nEncerrando programa...")
