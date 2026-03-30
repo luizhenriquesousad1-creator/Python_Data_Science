@@ -1,7 +1,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
 COLUNAS_NECESSARIAS = ['produto', 'preco', 'quntidade']
+
+def limpa_tela():
+    os.system('cls' if os.nome == 'int' else 'clear')
 
 def carregar_dados_csv(caminho):
 
@@ -110,6 +114,9 @@ def main():
 
 
     while True:
+
+        limpa_tela()
+        
         print("\n---MENU---")
         print("lista de produtos - [1]")
         print("maior venda - [2]")
