@@ -165,7 +165,7 @@ def main():
             print(f"\nProduto mais lucrativo: {produto}\n"
                   f"Faturamento total: {valor:,.2f}")
             
-        elif opcao ==6:
+        elif opcao == 6:
             filtrados = filtro_por_valor(df)
             print("\n Vendas acima do valor informado:\n")
             for _, linha in filtrados.iterrows():
