@@ -114,6 +114,12 @@ def main():
 
 
     while True:
+        caminho = input("digite o caminho do arquivo: ")
+        df = carregar_dados_csv(caminho)
+        if df is not None:
+            break
+            
+    while True:
 
         limpa_tela()
         
