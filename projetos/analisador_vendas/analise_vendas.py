@@ -1,7 +1,27 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+COLUNAS_NECESSARIAS = ['produto', 'preco', 'quntidade']
+
 def carregar_dados_csv(caminho):
+
+    try:
+        df = pd.read)csv(caminho)
+        if not all(col in df.columns for col in COLUNAS_NECESSARIAS):
+            print("\nErro: O arquivo não possui as colunas necessárias.")
+            print(f"\nColunas necessarias: {COLUNAS_NECESSARIAS}")
+            return None
+        return df
+    except FileNotFuoundError:
+        print("\nErro: Arquivo não encontrado.")
+        return None
+    except pd.errors.EmptyDataError:
+        print("\nErro: O arquivo está vazio.")
+        return None
+    except Exception as erro:
+        print("\nErro aos carregar o arquivo.")
+        return None
+        
     return pd.read_csv(caminho)
     
 def carrega_novo_arquivo():
@@ -11,9 +31,9 @@ def carrega_novo_arquivo():
     try: 
         df.read_csv(caminho)
         
-        if not all(col indf.columns for col in colunas_necessarias):
+        if not all(col indf.columns for col in COLUNAS_NECESSARIAS):
             print("\n Erro: O arquivo não posssui as colunas necessárias.")
-            print(f"\n colunas esperadas: {colunas_necessarias}")
+            print(f"\n colunas esperadas: {COLUNAS_NECESSARIAS}")
             return None
             
         print("\nArquivo carregado com sucesso.")
