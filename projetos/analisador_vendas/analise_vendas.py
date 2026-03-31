@@ -196,6 +196,7 @@ def main():
             novo_df = carrega_novo_arquivo()
             if novo_df is not None:
                 df = novo_df
+                
         elif opcao == 10:
             print(ticket_medio(df))
             
