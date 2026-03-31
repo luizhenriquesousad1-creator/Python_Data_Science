@@ -108,6 +108,14 @@ def grafico_quantidade(df):
 
     return plt.show()
 
+def ticket_medio(df):
+    df = df.copy()
+    df['faturamento'] = df['preco'] * df['quantidade']
+    agrupado = df.groupby('produto').agg({'faturamento':'sum','quantidade':'sum'})
+    ticket = agrupado['faturamento'] / agrupado['quantidade']
+
+return ticket
+
 def main():
     caminho = input("digite o nome da base de dados: ")
     df = carregar_dados_csv(caminho)
@@ -133,6 +141,7 @@ def main():
         print("Mostra Gráfico Faturamento X Produto" - [7]) 
         print("Mostra Gráfico Quantidade X Produto: - [8]")
         print("Carregar novo arquivo csv - [9]")
+        print("Ticket médio por produto: - [10]")
         print("Encerrar programa - [0]")
 
         try:
@@ -187,6 +196,8 @@ def main():
             novo_df = carrega_novo_arquivo()
             if novo_df is not None:
                 df = novo_df
+        elif opcao == 10:
+            print(ticket_medio(df))
             
         elif opcao == 0:
             print("\nEncerrando programa...")
