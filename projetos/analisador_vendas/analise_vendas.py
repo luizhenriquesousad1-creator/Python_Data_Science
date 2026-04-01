@@ -198,7 +198,11 @@ def main():
                 df = novo_df
                 
         elif opcao == 10:
-            print(ticket_medio(df))
+            ticket = ticket_medio_por_produto(df).sort_values(ascending=False)
+            print("\nTicket médio por produto: \n")
+            for produto, valor in ticket.items():
+                print(f"{produto}: R$ {valor:,.2f}")
+
             
         elif opcao == 0:
             print("\nEncerrando programa...")
