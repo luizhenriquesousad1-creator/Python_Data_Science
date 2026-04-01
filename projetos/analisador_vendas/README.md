@@ -1,97 +1,124 @@
 # 📊 Analisador de Vendas (CLI)
 
-Este projeto consiste em um sistema de análise de vendas desenvolvido em Python utilizando a biblioteca Pandas.
-A aplicação permite ao usuário explorar dados de vendas através de uma interface interativa no terminal (CLI), 
-realizando análises como faturamento total, produtos vendidos e identificação da maior venda.
+Sistema de análise de dados de vendas desenvolvido em Python utilizando Pandas.
+A aplicação permite explorar, filtrar e visualizar dados diretamente pelo terminal (CLI), simulando um fluxo real de análise de negócios.
 
-## 🎯 Objetivo do projeto
+---
 
-Este projeto foi desenvolvido com o objetivo de:
+## 🎯 Objetivo
 
-* Praticar análise de dados com Pandas
-* Trabalhar com arquivos CSV
-* Criar aplicações interativas em Python (CLI)
-* Desenvolver projetos para portfólio em Data Science
+Este projeto foi criado para evoluir habilidades em:
 
-## 📁 Estrutura do Projeto
+* Análise de dados com Python
+* Manipulação de arquivos CSV
+* Construção de aplicações interativas (CLI)
+* Estruturação de código com boas práticas
+* Desenvolvimento de projetos para portfólio em Data + Engenharia
 
-```
-analisador_vendas
-│
-├── dados_vendas.py      # Contém o dataset de vendas
-├── analise_vendas.py    # Script com as análises
-└── README.md
-```
+---
 
 ## 🚀 Funcionalidades
 
 O sistema permite:
 
-- 📦 Listar produtos vendidos
-- 🏆 Identificar a maior venda
-- 💰 Calcular o faturamento total
-- 🖥️ Interagir via menu no terminal
+* 📦 Listar produtos vendidos
+* 🏆 Identificar a maior venda
+* 💰 Calcular faturamento total
+* 📊 Ranking de produtos mais vendidos
+* 💸 Identificar produto mais lucrativo
+* 🎯 Filtrar vendas por valor mínimo
+* 📈 Visualizar gráficos de faturamento e quantidade
+* 🧮 Calcular ticket médio por produto
+* 📂 Carregar novos arquivos CSV dinamicamente
 
-## 🧠 Conceitos Aplicados
+---
 
-* List Comprehension
-* Funções em Python
-* Manipulação de listas e dicionários
-* Funções built-in (`sum`, `max`)
-* Estruturação de código
-  
-## 🧠 Tecnologias utilizadas
+## 🧠 Tecnologias e Conceitos
 
-- Python 3
-- Pandas
+### 🐍 Python
 
-## 🚀 Como executar
+* Funções e modularização
+* Tratamento de erros (`try/except`)
+* CLI interativa
 
-1. Clone o repositório:
+### 📊 Pandas
+
+* `groupby`
+* `agg`
+* operações vetorizadas
+* manipulação e transformação de dados
+
+### 📈 Visualização
+
+* Matplotlib
+* geração de gráficos de análise
+
+---
+
+## 📁 Estrutura do Projeto
 
 ```
+analisador_vendas/
+│
+├── analise_vendas.py   # Lógica principal e CLI
+├── dados/              # Arquivos CSV de entrada
+└── README.md
+```
+
+---
+
+## ▶️ Como executar
+
+```bash
 git clone https://github.com/seu-usuario/python-data-science.git
-```
-
-2. Acesse a pasta do projeto:
-
-```
 cd python-data-science/projetos/analisador_vendas
-```
-
-3. Execute o script:
-
-```
 python analise_vendas.py
 ```
 
-## 📌 Exemplo de saída
+---
+
+## 📊 Exemplo de uso
 
 ```
-Os produtos vendidos são: {'teclado', 'mouse', 'monitor'}
-A maior venda foi de um monitor, que vendeu 1 unidades e gerou 900 reais.
-O faturamento total foi 1650 reais
+--- MENU ---
+1 - Lista de produtos
+2 - Maior venda
+3 - Faturamento total
+4 - Ranking de vendas
+...
 ```
+
+---
 
 ## 🧩 Problema resolvido
 
-Este projeto simula um cenário comum de negócios, onde é necessário analisar dados de vendas para extrair informações relevantes, 
-como desempenho de produtos e faturamento. A solução permite transformar dados brutos em insights úteis de forma simples e interativa.
+Este projeto simula um cenário real de negócio onde dados brutos de vendas precisam ser analisados para gerar insights como:
+
+* desempenho de produtos
+* faturamento
+* comportamento de vendas
+
+A aplicação transforma dados em informações úteis de forma simples e automatizada.
+
+---
 
 ## 📈 Próximos passos
-🚀 Próximas melhorias
-📈 Adicionar gráficos com Matplotlib
-📊 Ranking de produtos mais vendidos
-🔍 Filtros por preço
-📂 Suporte a múltiplos arquivos CSV
 
-## 📌 Status do projeto
+* 🔗 Integração com múltiplos arquivos CSV (pipeline)
+* 📊 Análise exploratória mais avançada (EDA)
+* 🎨 Visualizações mais profissionais (Seaborn)
+* 🧱 Refatoração para arquitetura modular (múltiplos arquivos)
+* ⚙️ Automação de relatórios
 
-✅ Concluído (versão inicial)  
-🔄 Em evolução
+---
 
-👨‍💻 Projeto desenvolvido como parte dos estudos em Python para Ciência de Dados.
+## 📌 Status
 
-👨‍💻 Autor
+🟢 Em evolução contínua
+🚀 Projeto em expansão com foco em Data + Engenharia
+
+---
+
+## 👨‍💻 Autor
 
 Luiz Henrique
